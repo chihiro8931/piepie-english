@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#f7f7f4">
+  <title>ぴえぴえEnglish</title>
+  <!-- キャッシュ対策: バージョンを上げたらCSS/JSのURLも更新 -->
+  <link rel="stylesheet" href="style.css?v=0.3">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="logo">ぴえぴえ<span>English</span></div>
+        <div class="sub">CHANKO FAMILY ENGLISH</div>
+      </div>
+      <div class="streak" id="streak">🔥 0日</div>
+    </header>
+
+    <section id="home" class="screen active">
+      <div class="hero">
+        <div class="owl">🦉</div>
+        <h1>今日も5分だけ。</h1>
+        <p>英語は、ちょっとずつでも続ける。</p>
+      </div>
+
+      <div class="stats">
+        <div><span id="xp">0</span><small>XP</small></div>
+        <div><span id="days">0</span><small>学習日数</small></div>
+        <div><span id="games">0</span><small>プレイ回数</small></div>
+      </div>
+
+      <button class="primary big" id="startBtn">単語カルタをはじめる</button>
+      <p class="hint">10問 / 4枚のカード / 正解すると次の単語へ</p>
+    </section>
+
+    <section id="game" class="screen">
+      <div class="game-head">
+        <button class="textBtn" id="quitBtn">← やめる</button>
+        <div id="progress">1 / 10</div>
+        <div id="timer">0.0秒</div>
+      </div>
+
+      <div class="question-card">
+        <div class="label">この英単語の意味は？</div>
+        <div class="word" id="word">apple</div>
+        <div class="tap-guide">正しい日本語をタップ</div>
+      </div>
+
+      <div class="choices" id="choices"></div>
+      <div id="feedback" class="feedback"></div>
+    </section>
+
+    <section id="result" class="screen">
+      <div class="result-emoji">🎉</div>
+      <h1>レッスン完了！</h1>
+      <p class="result-sub">今日のぴえぴえEnglish</p>
+
+      <div class="result-grid">
+        <div><strong id="resultCorrect">0</strong><span>正解</span></div>
+        <div><strong id="resultRate">0%</strong><span>正答率</span></div>
+        <div><strong id="resultTime">0.0秒</strong><span>タイム</span></div>
+        <div><strong id="resultXp">+0</strong><span>獲得XP</span></div>
+      </div>
+
+      <div class="message" id="resultMessage"></div>
+      <button class="primary big" id="againBtn">もう一度やる</button>
+      <button class="secondary" id="homeBtn">ホームへ</button>
+    </section>
+
+    <footer>v0.3 prototype</footer>
+  </main>
+  <script src="app.js?v=0.3"></script>
+</body>
+</html>
